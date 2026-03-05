@@ -1,0 +1,8 @@
+function deleteSpam() {
+  var searchQuery = 'from:("HOD NWC ET KTR" OR "DIRECTOR SPORTS" OR "SUSTAINABILITY SRMIST" OR "LEAD PLACFVS CAREER CENTER" OR "IT INSIGHTS")';
+  var threads = GmailApp.search(searchQuery);
+  
+  for (var i = 0; i < threads.length; i++) {
+    threads[i].moveToTrash();
+  }
+}
